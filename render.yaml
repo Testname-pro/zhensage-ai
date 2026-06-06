@@ -1,0 +1,17 @@
+# Render.com 部署配置
+# 访问 https://dashboard.render.com/ 创建 Web Service
+
+services:
+  - type: web
+    name: zhensage-ai
+    runtime: docker
+    plan: free
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: FLASK_ENV
+        value: "production"
+    disk:
+      name: model-cache
+      mountPath: /app/dialogpt_model
+      sizeGB: 1
