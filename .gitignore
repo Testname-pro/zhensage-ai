@@ -1,0 +1,5 @@
+.uploads/
+dialogpt_model/
+__pycache__/
+*.pyc
+*.log
